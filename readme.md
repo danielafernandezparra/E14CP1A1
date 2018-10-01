@@ -31,7 +31,7 @@
 - Generar la ruta para la creación de un producto asociado a una categoría.
 
     - Para ello modificar la ruta resources de Categories que ahora recibirá un bloque y dentro crearemos la ruta que apuntará al método create de products.
-    
+
     ~~~ruby
     resources :products, only: [:create]
     ~~~
@@ -50,6 +50,7 @@
 
     ~~~ruby
     <%= form_with(model: [ @category, @product ]) do |form| %>
+      <% end %>
     ~~~
 
     - Donde **@product** debe ser declarado en el método correspondiente como una nueva instancia de **Product**.
@@ -70,7 +71,7 @@
 
      - Agregar el botón con el *method: :delete* a cada registro de productos en la tabla.
 
-- En la vista *Index* de *categories*: 
+- En la vista *Index* de *categories*:
     - Los registros deben estar listados en una tabla (bootstrap) que contenga el nombre de la categoría y la cantidad de productos que existe por categoría (**count**).
 
     - Al hacer click en el nombre de la categoría debe redireccionar a la vista *show* de esa categoría.
